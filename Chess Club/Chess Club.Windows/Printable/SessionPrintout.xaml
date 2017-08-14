@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="Chess_Club.Printable.SessionPrintout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chess_Club.Printable"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="printableArea">
+        <StackPanel>
+            <StackPanel HorizontalAlignment="Left" Width="600" Margin="20,20,0,20">
+                <TextBlock Name="lblTitle" Text="Name" FontSize="32" Foreground="Black" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                <TextBlock Name="lblGames" Margin="0,15,0,0" Text="#Games" FontSize="22" Foreground="Black" Style="{StaticResource BaseTextBlockStyle}"/>
+                <TextBlock Name="lblMembers" Margin="0,15,0,0" Text="#Members" FontSize="22" Foreground="Black" Style="{StaticResource BaseTextBlockStyle}"/>
+            </StackPanel>
+            <StackPanel Name="pnlGames">
+                <TextBlock Margin="0,5,0,5" Name="lblPnlGamesTitle" Text="Games Played:" FontSize="22" Foreground="Black" HorizontalAlignment="Left" Style="{StaticResource BaseTextBlockStyle}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Chess_Club.Models.Game">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAYQAAEBEIABRAEANSCgAAiAAIAAAAwQCAQAAACBQg=</HashCode>
+      <FileName>C:\Users\Admin\SkyDrive\College\CG4\Project\Chess Club\Chess Club\Chess Club.Shared\Models\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chess_Club.Models.Member">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QSAAgAAACAAAAAAAAAAAAAQAAAAAAAAAAAAggAACAAA=</HashCode>
+      <FileName>C:\Users\Admin\SkyDrive\College\CG4\Project\Chess Club\Chess Club\Chess Club.Shared\Models\Member.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chess_Club.Models.Model" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\Admin\SkyDrive\College\CG4\Project\Chess Club\Chess Club\Chess Club.Shared\Models\Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chess_Club.Models.Session">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCAAAAAAAAIAAAAAAAAgAAAAAAAAAAABAAAEAAAAAAA=</HashCode>
+      <FileName>C:\Users\Admin\SkyDrive\College\CG4\Project\Chess Club\Chess Club\Chess Club.Shared\Models\Session.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chess_Club.DAL.ChessClubContext" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAIAAAAAQAAAAgCBAAAAQAAAAAAAAIIAEAAAAAAA=</HashCode>
+      <FileName>C:\Users\Admin\SkyDrive\College\CG4\Project\Chess Club\Chess Club\Chess Club.Shared\DAL\ChessClubContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chess_Club.DAL.ModelRepository&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAQAAAAAAAAAQAAAAAAEAAhAAAA=</HashCode>
+      <FileName>C:\Users\Admin\SkyDrive\College\CG4\Project\Chess Club\Chess Club\Chess Club.Shared\DAL\ChessClubContext.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Chess_Club.DAL.IModelRepository" Collapsed="true">
+    <Position X="2" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>C:\Users\Admin\SkyDrive\College\CG4\Project\Chess Club\Chess Club\Chess Club.Shared\DAL\ChessClubContext.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Chess_Club.Enums.Outcome" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAACAQAAABACAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\Admin\SkyDrive\College\CG4\Project\Chess Club\Chess Club\Chess Club.Shared\Enums\Outcome.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Chess_Club.Enums.DrawTypes" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAEAAAAgAAAAAAAAIAAAAAAAg=</HashCode>
+      <FileName>C:\Users\Admin\SkyDrive\College\CG4\Project\Chess Club\Chess Club\Chess Club.Shared\Enums\Outcome.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

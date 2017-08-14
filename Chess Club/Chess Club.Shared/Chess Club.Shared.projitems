@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>248428e0-1306-48d4-9e51-00485a540bc1</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Chess_Club</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)AddEditMember.xaml.cs">
+      <DependentUpon>AddEditMember.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AddEditSession.xaml.cs">
+      <DependentUpon>AddEditSession.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AddEditTournament.xaml.cs">
+      <DependentUpon>AddEditTournament.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AddGame.xaml.cs">
+      <DependentUpon>AddGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ContinuationManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ContinuationPage.xaml.cs">
+      <DependentUpon>ContinuationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\ChessClubContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\Outcome.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Enums\TournamentStyle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Tournament.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TournamentRound.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SettingsFlyout.xaml.cs">
+      <DependentUpon>SettingsFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SplitGames.xaml.cs">
+      <DependentUpon>SplitGames.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Game.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Model.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Member.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Session.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BooleanNegationValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SplitTournamentRounds.xaml.cs">
+      <DependentUpon>SplitTournamentRounds.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SplitTournaments.xaml.cs">
+      <DependentUpon>SplitTournaments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)StringFormatConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Black.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\BlackPlayer.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Draw.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\MemberDefaultPicture.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Rook.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\Queen.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TournamentInProgress.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\TournamentOver.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\White.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\WhitePlayer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)AddEditMember.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)AddEditSession.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)AddEditTournament.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)AddGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)ChessClubStyles.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Common\ContinuationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SettingsFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SplitGames.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SplitTournamentRounds.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)SplitTournaments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

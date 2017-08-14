@@ -1,0 +1,74 @@
+﻿<Application
+    x:Class="Chess_Club.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chess_Club"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:chess="clr-namespace:Chess_Club">
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="generic.xaml"/>
+                <ResourceDictionary Source="ChessClubStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <local:StringFormatConverter x:Key="StringFormatter"/>
+            <DataTemplate x:Key="GridViewSessionsTemplate">
+                <Grid Background="#FF939598" Height="178" Width="128">
+                    <StackPanel Orientation="Vertical" Background="#CC000000" Height="50" VerticalAlignment="Bottom">
+                        <TextBlock Text="{Binding Title}" Margin="10,3,0,0" Width="120" Height="20" 
+                       TextTrimming="WordEllipsis" HorizontalAlignment="Left"/>
+                        <TextBlock Text="{Binding Members.Count, Converter={StaticResource StringFormatter}, ConverterParameter='Attendees: {0}'}" Margin="10,0,0,10" Width="120" Height="20" 
+                       TextTrimming="WordEllipsis" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="GridViewGamesTemplate">
+                <Grid Background="#FF939598" Height="178" Width="128">
+                    <Image Source="{Binding Path=Winner, Converter={StaticResource StringFormatter}, ConverterParameter='/Assets/{0}.png'}" Width="128" Height="128" VerticalAlignment="Top"  Stretch="UniformToFill"/>
+                    <StackPanel Orientation="Vertical" Background="#CC000000" Height="50" VerticalAlignment="Bottom">
+                        <TextBlock Text="{Binding WhitePlayer.Name, Converter={StaticResource StringFormatter}, ConverterParameter='White: {0}'}" Margin="10,3,0,0" Width="120" Height="20" 
+                       TextTrimming="WordEllipsis" HorizontalAlignment="Left"/>
+                        <TextBlock Text="{Binding BlackPlayer.Name, Converter={StaticResource StringFormatter}, ConverterParameter='Black: {0}'}" Margin="10,0,0,10" Width="120" Height="20" 
+                       TextTrimming="WordEllipsis" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="GridViewMembersTemplate">
+                <Grid Background="#FF939598" Height="178" Width="128">
+                    <Image Source="{Binding Bitmap}" VerticalAlignment="Top" Width="128" Height="128" Stretch="UniformToFill"/>
+                    <StackPanel Orientation="Vertical" Background="#CC000000" Height="50" VerticalAlignment="Bottom">
+                        <TextBlock Text="{Binding Name}" Margin="10,3,0,0" Width="120" Height="20" 
+                       TextTrimming="WordEllipsis" HorizontalAlignment="Left"/>
+                        <TextBlock Text="{Binding ELO, Converter={StaticResource StringFormatter}, ConverterParameter='ELO: {0}'}" Margin="10,0,0,10" Width="120" Height="20" 
+                       TextTrimming="WordEllipsis" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="GridViewTournamentsTemplate">
+                <Grid Background="#FF939598" Height="178" Width="128">
+                    <Image Source="{Binding Path=DisplayPicture, Converter={StaticResource StringFormatter}, ConverterParameter='/Assets/{0}.png'}" VerticalAlignment="Top" Width="128" Height="128" Stretch="UniformToFill"/>
+                    <StackPanel Orientation="Vertical" Background="#CC000000" Height="50" VerticalAlignment="Bottom">
+                        <TextBlock Text="{Binding Name}" Margin="10,3,0,0" Width="120" Height="20" 
+                       TextTrimming="WordEllipsis" HorizontalAlignment="Left"/>
+                        <TextBlock Text="{Binding ELOPrize, Converter={StaticResource StringFormatter}, ConverterParameter='ELO Prize: {0}'}" Margin="10,0,0,10" Width="120" Height="20" 
+                       TextTrimming="WordEllipsis" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="GridViewTournamentRoundsTemplate">
+                <Grid Background="#FF939598" Height="178" Width="128">
+                    <Image Source="{Binding Path=DisplayPicture, Converter={StaticResource StringFormatter}, ConverterParameter='/Assets/{0}.png'}" VerticalAlignment="Top" Width="128" Height="128" Stretch="UniformToFill"/>
+                    <StackPanel Orientation="Vertical" Background="#CC000000" Height="50" VerticalAlignment="Bottom">
+                        <TextBlock Text="{Binding Name}" Margin="10,3,0,0" Width="120" Height="20" 
+                       TextTrimming="WordEllipsis" HorizontalAlignment="Left"/>
+                        <TextBlock Text="{Binding RoundNumber, Converter={StaticResource StringFormatter}, ConverterParameter='Round {0}'}" Margin="10,0,0,10" Width="120" Height="20" 
+                       TextTrimming="WordEllipsis" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </Grid>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

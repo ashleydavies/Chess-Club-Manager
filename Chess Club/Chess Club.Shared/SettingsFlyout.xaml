@@ -1,0 +1,34 @@
+﻿<SettingsFlyout
+    x:Class="Chess_Club.ChessClubSettingsFlyout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chess_Club"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    IconSource="Assets/SmallLogo.png"
+    Title="Settings"
+    d:DesignWidth="346">
+    
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+        <StackPanel Style="{StaticResource SettingsFlyoutSectionStyle}">
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Administrative" />
+            
+            <Button Name="btnResetElo" IsEnabled="False" Content="Reset all member Elo" Margin="0,15,0,0" Click="btnResetElo_Click" />
+            <Button Name="btnDeleteGames" IsEnabled="False" Content="Delete all games" Click="btnDeleteGames_Click" />
+            <Button Name="btnDeleteTournaments" IsEnabled="False" Content="Delete all tournament data" Click="btnDeleteTournaments_Click" />
+            <Button Name="btnDeleteAll" IsEnabled="False" Content="Delete all data" Click="btnDeleteAll_Click" />
+            
+            <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="Navigation" />
+
+            <Button Name="btnAddGame" IsEnabled="False" Content="Add Game" Margin="0,15,0,0" Click="btnAddGame_Click" />
+            <Button Name="btnAddSession" IsEnabled="False" Content="Add Session" Click="btnAddSession_Click" />
+            <Button Name="btnAddMember" IsEnabled="False" Content="Add Member" Click="btnAddMember_Click" />
+            <Button Name="btnAddTournament" IsEnabled="False" Content="Add Tournament" Click="btnAddTournament_Click" />
+            <Button Name="btnGamesPage" IsEnabled="False" Content="View Games" Click="btnGamesPage_Click" />
+            <Button Name="btnSessionsPage" IsEnabled="False" Content="View Sessions" Click="btnSessionsPage_Click" />
+            <Button Name="btnMembersPage" IsEnabled="False" Content="View Members" Click="btnMembersPage_Click" />
+            <Button Name="btnTournamentsPage" IsEnabled="False" Content="View Tournaments" Click="btnTournamentsPage_Click" />
+        </StackPanel>
+    </StackPanel>
+</SettingsFlyout>

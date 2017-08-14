@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="Chess_Club.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chess_Club"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid VerticalAlignment="Center" Width="500" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Login" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource HeaderTextBlockStyle}"/>
+
+            <CheckBox Name="chkGuest" Content="Login as Guest" Grid.Row="1" Grid.Column="1" Checked="chkGuest_Checked" Unchecked="chkGuest_Unchecked"/>
+            <TextBlock Text="Username:" Grid.Row="2" Style="{StaticResource FormTextBlockStyle}"/>
+            <TextBox Name="txtUsername" Grid.Row="2" Grid.Column="1" Width="200" Style="{StaticResource FormTextBoxStyle}" TextChanged="txtUsername_TextChanged"/>
+            <TextBlock Name="txtUsernameError" Text="Username does not exist in database." Grid.Row="3" Grid.Column="1" Style="{StaticResource FormIncorrectLabel}" Visibility="Collapsed"/>
+            <TextBlock Text="Password:" Grid.Row="4" Style="{StaticResource FormTextBlockStyle}"/>
+            <PasswordBox Name="txtPassword" Grid.Row="4" Grid.Column="1" Width="200" Style="{StaticResource FormPasswordBoxStyle}" PasswordChanged="txtPassword_PasswordChanged"/>
+            <TextBlock Name="txtPasswordError" Text="Incorrect Password." Grid.Row="5" Grid.Column="1" Style="{StaticResource FormIncorrectLabel}" Visibility="Collapsed"/>
+
+            <StackPanel Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <ProgressRing Name="prgRing" Width="30" Height="30" IsActive="True"/>
+                <TextBlock Name="txtLoadingStatus" Text="Loading..." Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20"/>
+            </StackPanel>
+
+            <Button x:Name="btnSubmit" Grid.Row="6" Grid.Column="1" Content="Login" Width="200" Click="btnSubmit_Click" Visibility="Collapsed"/>
+        </Grid>
+    </Grid>
+</Page>

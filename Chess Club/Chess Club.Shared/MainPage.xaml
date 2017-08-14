@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="Chess_Club.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Chess_Club"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Hub Header="Chess Club" SectionHeaderClick="Hub_SectionHeaderClick">
+            <HubSection Width="500" Header="Quick Stats">
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Name="txtSessionCount" FontSize="16" TextWrapping="Wrap" Loaded="txtSessionCount_Loaded" />
+                        <TextBlock Name="txtMemberCount" FontSize="16" TextWrapping="Wrap" Loaded="txtMemberCount_Loaded" />
+                        <TextBlock Name="txtAttendeesTotal" FontSize="16" TextWrapping="Wrap" Loaded="txtAttendeesTotal_Loaded" />
+
+                        <StackPanel Margin="0,50,0,0" Orientation="Horizontal">
+                            <Button Name="btnAddMember" Content="Add Member &gt;" Click="btnAddMember_Click" Loaded="btnAddMember_Loaded"/>
+                            <Button Name="btnAddSession" Content="Add Session &gt;" Click="btnAddSession_Click" Loaded="btnAddSession_Loaded"/>
+                            <Button Name="btnAddGame" Content="Add Game &gt;" Click="btnAddGame_Click" Loaded="btnAddGame_Loaded"/>
+                        </StackPanel>
+                        <Button Name="btnAddTournament" Content="New Tournament &gt;" Click="btnAddTournament_Click" Loaded="btnAddTournament_Loaded"/>
+                    </StackPanel>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Name="sctMembers" Width="600" Header="Members" IsHeaderInteractive="True">
+                <DataTemplate>
+                    <GridView Name="grdMembers" SelectionChanged="grdMembers_SelectionChanged" CanReorderItems="True" CanDragItems="True"
+                              ItemTemplate="{StaticResource GridViewMembersTemplate}" Loaded="grdMembers_Loaded"/>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Name="sctSessions" Width="600" Header="Sessions" IsHeaderInteractive="True">
+                <DataTemplate>
+                    <GridView Name="grdSessions" SelectionChanged="grdSessions_SelectionChanged" CanReorderItems="True" CanDragItems="True" 
+              ItemTemplate="{StaticResource GridViewSessionsTemplate}" Loaded="grdSessions_Loaded"/>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Name="sctGames" Width="600" Header="Games" IsHeaderInteractive="True">
+                <DataTemplate>
+                    <GridView Name="grdGames" SelectionChanged="grdGames_SelectionChanged" CanReorderItems="True" CanDragItems="True" 
+              ItemTemplate="{StaticResource GridViewGamesTemplate}" Loaded="grdGames_Loaded"/>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Name="sctTournaments" Width="600" Header="Tournaments" IsHeaderInteractive="True">
+                <DataTemplate>
+                    <GridView Name="grdTournaments" SelectionChanged="grdTournaments_SelectionChanged" CanReorderItems="True" CanDragItems="True" 
+              ItemTemplate="{StaticResource GridViewTournamentsTemplate}" Loaded="grdTournaments_Loaded"/>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+        <Grid Name="grdLoggedInUser" Visibility="Collapsed" Height="99" Width="300" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,30,30,0">
+            <Image Name="imgLoggedInUser" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Width="64" Height="64" Stretch="UniformToFill"/>
+            <TextBlock Name="txtWelcomeLabel" Width="200"  Margin="10,10,0,0" FontSize="22" 
+                    TextTrimming="CharacterEllipsis" VerticalAlignment="Top" HorizontalAlignment="Left" Loaded="txtWelcomeLabel_Loaded" TextWrapping="Wrap"/>
+            <Button Name="btnViewProfile" Content="View your profile &gt;" Margin="10,0,0,20" FontSize="14" 
+                    HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{StaticResource TextBlockButtonStyle}" Click="btnViewProfile_Click"/>
+            <Button Name="btnLogout" Content="Log Out &gt;" Margin="10,0,0,5" FontSize="14" 
+                    HorizontalAlignment="Left" VerticalAlignment="Bottom" Style="{StaticResource TextBlockButtonStyle}" Click="btnLogout_Click"/>
+        </Grid>
+        <Button Name="btnSmallLogout" Visibility="Collapsed" VerticalAlignment="Top" HorizontalAlignment="Right" Style="{StaticResource TextBlockButtonStyle}" Margin="0,20,20,0 " Content="Log out &gt;"/>
+    </Grid>
+</Page>
